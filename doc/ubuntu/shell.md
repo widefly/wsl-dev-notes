@@ -1,4 +1,4 @@
-# Shell configurations
+# Bash shell configurations
 
 ## Essential tools
 ```bash
@@ -7,8 +7,9 @@ build-essential cmake pkg-config git \
 tmux ffmpeg tree vim unzip curl pv jq expect bc less openssh-server 
 ```
 
-## Configure .bashrc
+## Configure essential config files
 ### ~/.tmux.conf
+tmux is a terminal multiplexer 
 ```bash
 cat > ~/.tmux.conf << "EOF"
 # set default shell to load and prevent loading .profile for each new session
@@ -57,6 +58,7 @@ EOF
 ```
 
 ### ~/.inputrc
+user-specific configuration file used by the GNU Readline library
 ```bash
 cat > ~/.inputrc << "EOF"
 "\e[A": history-search-backward
@@ -67,6 +69,7 @@ EOF
 ```
 
 ### ~/.vimrc
+vim config file
 ```bash
 cat > ~/.vimrc << "EOF"
 :set background=dark
@@ -86,6 +89,7 @@ EOF
 ```
 
 ### ~/.bashcfg.sh
+useful shell script to be sourced by ~/.bashrc
 ```bash
 cat > ~/.bashcfg.sh << "EOF"
 ##################### history ##############################
@@ -139,6 +143,7 @@ source ~/.bashfg.sh
 ```
 
 ### sudoers
+- Add an username to sudoers eliminates entering password for every sudo command.
 - Add the following line after running a command `sudo visudo` (replace xxx with the desire username)
 ```bash
 xxxxx ALL=(ALL) NOPASSWD:ALL
