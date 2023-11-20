@@ -37,9 +37,12 @@ Apply the following settings when creating a new putty profile.  These settings 
 - Window > Appearance, under Font, select 'Consolas, 8-point'
 
 ## App requires XWindows
-- To test XWindows, it needs to run the Xming.
+- To test X-Windows, it needs to run the Xming.
 - Install xfe and x11-apps on WSL  
   ```bash
   sudo apt-get -y install xfe x11-apps
+  ```
+- Run some X-Windows app to test it, e.g.
+  ```bash
   (xclock&); (xeyes&)
   ```
