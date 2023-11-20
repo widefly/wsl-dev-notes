@@ -66,14 +66,3 @@ sudo service ssh start
 ## Stop ssh
 sudo service ssh stop
 ```
-
-## Enable auto start of openssh server upon user logon to Windows
-- Create a file startwsl.cmd under folder
-  %appdata%\Microsoft\Windows\Start Menu\Programs\Startup
-```cmd
-:: This keep a process running under init
-wsl bash -c "nohup bash -c 'while true; do sleep 1h; done &' &>/dev/null "
-:: This starts openssh service
-wsl sudo service ssh start
-timeout /t 3
-```
