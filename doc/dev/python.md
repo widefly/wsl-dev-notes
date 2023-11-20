@@ -102,7 +102,7 @@
       "--line-length",
       "120"
     ],
-    "python.defaultInterpreterPath": "${env:HOME}/.pyenv/versions/3.8.16/envs/pill-app-py-image/bin/python3",
+    "python.defaultInterpreterPath": "${env:HOME}/.pyenv/versions/3.8.16/envs/proj_test/bin/python3",
     "eslint.format.enable": true,
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
@@ -115,6 +115,7 @@
     ]
   }
   ```
+  NOTE: "python.defaultInterpreterPath" is an important setting to tell vscode to use the virtual env
 
 ## install opencv
 - Install opencv 4.8.x.x
