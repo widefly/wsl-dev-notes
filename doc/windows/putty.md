@@ -13,7 +13,7 @@
 
 ## Convert rsa key to putty key (*.ppk)
 - Without private key setup, SSH requires users to supply username and password to authenticate themselves on each SSH connection.
-- To simplify the connection, that avoids supplying username and password every time, and to strengthen the authentication security, private/public key is highly recommended.
+- To simplify the connection, that avoids supplying username and password every time, and to strengthen the authentication security, private/public key setup is highly recommended.
 - A private personal private key should be generated in RSA format.
   ```bash
   ## Under WSL, Create private and public key in RSA format 
@@ -27,7 +27,7 @@
   - Select the RSA key (private key copied from the Ubuntu ~/.ssh)
   - Save putty private key (ppk) to the %userprofile%\putty directory.
 
-## recommended putty settings
+## Recommended putty settings
 Apply the following settings when creating a new putty profile.  These settings can be applied to "Default Settings" as well.
 - Connection > SSH > X11, "enable X11 forwarding"
 - Connection > Data, enter the linux username on field "Auto-login username" 
