@@ -65,7 +65,7 @@ This recommended settings needs installation of openssh server. Refer to openssh
   -  Run the app, e.g. `Ubuntu 22.04.2 LTS`
   -  Run the command prompt, then run `wsl`.  This runs the default Linux.  
      To run a specific Linux, `wsl -d xxxx` where xxxx is Linux distribution name.
-  -  Access via ssh.  Recommended to use `Putty` to connect to Ubuntu openssh server.
+  -  Access via ssh.  Recommended to use `Putty` to connect to Ubuntu openssh server. Refer to [putty](./putty.md)
 - To set a Linux distribution as the default WSL Linux, run `wsl --set-default xxxx` where xxxx is the Linux distribution name.
 
 ## Copy files between Windows host and Linux
