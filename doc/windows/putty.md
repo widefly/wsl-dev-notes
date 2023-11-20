@@ -3,8 +3,8 @@
 ## Installation
 1. Install puTTY  
    https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
-2. Install Xming, a X-Windows manager for Windows.
-   NOTE: ask Jams for installation program
+2. Install Xming, a X-Windows manager for Windows.  
+   NOTE: Ask development lead to obtain the installation file.
 
 ## Convert rsa key to putty key (*.ppk)
 - Create a data directory to keep this key file. In file explorer, goto %userprofile%, create a folder data\putty, e.g. C:\Users\xxx\data\putty
