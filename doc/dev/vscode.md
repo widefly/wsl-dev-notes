@@ -1,4 +1,7 @@
+# vscode
 
+## Installation
+- Download [here](https://code.visualstudio.com/download)
 
 ## user settings
 - In command palette, search "user settings (json)". Some settings are recommended, e.g. font size
