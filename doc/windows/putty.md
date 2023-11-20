@@ -3,7 +3,8 @@
 ## Installation
 1. Install puTTY  
    https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
-2. Install Xming (X-Windows manager under Windows)
+2. Install Xming, a X-Windows manager for Windows.
+   NOTE: ask Jams for installation program
 
 ## Convert rsa key to putty key (*.ppk)
 - Create a data directory to keep this key file. In file explorer, goto %userprofile%, create a folder data\putty, e.g. C:\Users\xxx\data\putty
@@ -13,6 +14,7 @@
   - Save private key (ppk) to the data\putty folder
 
 ## recommended putty settings
+Apply the following settings when creating a new putty profile.  These settings can be applied to "Default Settings" as well.
 - Connection > SSH > X11, "enable X11 forwarding"
 - Connection > Data, enter the linux username on field "Auto-login username" 
 - Connection > Data, enter "linux" on field terminal-type string  

@@ -1,10 +1,16 @@
 # Bash shell configurations
 
 ## Essential tools
+- Below install packages, update the package index and upgrade the existing packages
+```bash
+sudo apt-get -y update; sudo apt-get -y upgrade
+```
+-  Install some useful packages
 ```bash
 sudo apt-get -y install \
 build-essential cmake pkg-config git \
-tmux ffmpeg tree vim unzip curl pv jq expect bc less openssh-server 
+tmux ffmpeg tree vim unzip curl pv jq expect bc less openssh-server \
+xfe x11-apps
 ```
 
 ## Configure essential config files
@@ -139,7 +145,7 @@ EOF
 Add the following line to ~/.bashrc
 ```bash
 ### source standard bash cfg
-source ~/.bashfg.sh
+source ~/.bashcfg.sh
 ```
 
 ### sudoers

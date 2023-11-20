@@ -2,16 +2,17 @@
 
 ## WSL Installation and Ubuntu
 1. WSL is `Windows Subsystem for Linux`.  
-   `NOTE:` Use WSL2 instead of older WSL1.
+   `NOTE:` Use newer WSL2 instead of the older WSL1.  WSL2 has many performance improvement over WSL1.
 2. To setup WSL2, simply install an Ubuntu Linux via Microsoft Store.  
    Recommended to install `Ubuntu 22.04.2 LTS`
 3. Once installed, the Ubuntu Linux terminal can be opened by a Windows app named `Ubuntu 22.04.2 LTS`
+
 
 ## Important WSL settings
 ### Port forwarding (localhost to WSL Linux)
 - When a WSL Linux instance is running, it was assigned with an IP address that is different from that of the Windows host.  For example, Windows host: `192.168.0.11` and Ubuntu: `172.18.167.234`
 - By default, listening port on the WSL Linux cannot be accessed by Windows's localhost address.  
-  For example, http://localhost:3000 will not connect to listening port 3000 on WSL Linux.
+  For example, http://localhost:3000 will not connect to the listening port 3000 on WSL Linux.
 - To enable localhost port forwarding, i.e. Windows's localhost port forwarding to WSL Linux,  
   Add the following config to `%UserProfile%/.wslconfig`
   ```ini
@@ -32,7 +33,11 @@
   ...
   ```
 
+## Essential packages and shell configuration
+- Refer to shell [note](../ubuntu/shell.md).
+
 ### Keep WSL running
+This recommended settings needs installation of openssh server. Refer to openssh [note](../ubuntu/openssh.md).
 - WSL will be auto shutdown if there is no active Linux terminal or top level processes running.
 - To keep WSL Linux alive in background, create a simple cmd file to auto start openssh server, e.g. startwsl.cmd, and place it under folder `%appdata%\Microsoft\Windows\Start Menu\Programs\Startup`  
   ```cmd
