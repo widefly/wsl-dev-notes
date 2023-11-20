@@ -2,7 +2,7 @@
 
 ## Background
 - Windows command prompt or direct Ubuntu command prompt lacks of many features.  
-- In fact, many developers use some other 3rd party SSH client, e.g. PuTTY is one of the most used SSH client on Windows.
+- In fact, most developers use 3rd party SSH client. For example, PuTTY is one of the most used SSH client on Windows.
 
 
 ## Installation
