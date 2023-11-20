@@ -4,7 +4,7 @@
 - Download [here](https://code.visualstudio.com/download)
 
 ## user settings
-- In command palette, search "user settings (json)". Some settings are recommended, e.g. font size
+- In the command palette, search "user settings (json)". Some settings are recommended, e.g. font size
   ```json
   {
     ....
@@ -14,7 +14,7 @@
   ```
 
 ## Extensions
-In the vscode search field, enter the below to install extensions.  Can be installed via UI
+In the vscode search field, enter the below to install extensions.  These can be installed via extension GUI.
 
 - Install extensions locally
   - WSL  
