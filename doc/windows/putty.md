@@ -36,13 +36,36 @@ Apply the following settings when creating a new putty profile.  These settings 
 - Window > Appearance, under Font, select 'Consolas, 8-point'
 
 ## About 24-bit color 
-- To enable 24-bit color
+- To enable 24-bit color  
   Connection > Data, enter "xterm" on field terminal-type string  
 - Add lines to ~/.tmux.conf
+  ```bash
   # Use the xterm-256color terminal
   set -g default-terminal "xterm"
   # Apply Tc
   set-option -ga terminal-overrides ",xterm:Tc"
+  ```
+- To test if terminal supports 24-bit color, run command
+  ```awk
+  awk 'BEGIN{
+  s="/\\/\\/\\/\\/\\"; s=s s s s s s s s;
+  for (colnum = 0; colnum<77; colnum++) {
+  r = 255-(colnum*255/76);
+  g = (colnum*510/76);
+  b = (colnum*255/76);
+  if (g>255) g = 510-g;
+  printf "\033[48;2;%d;%d;%dm", r,g,b;
+  printf "\033[38;2;%d;%d;%dm", 255-r,255-g,255-b;
+  printf "%s\033[0m", substr(s,colnum+1,1);
+  }
+  printf "\n";
+  }'
+  ```
+- To print a single line with color
+  ```bash
+  r=255; g=100; b=100; echo -e "\033[38;2;${r};${g};${b}mhello world\033[0;00m"
+  ```
+  
 
 ## App requires XWindows
 - To test X-Windows, it needs to run the Xming.
