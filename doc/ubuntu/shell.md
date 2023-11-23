@@ -60,6 +60,12 @@ bind c clear-history
 #set -g default-terminal "screen-256color"
 #set -g mode-style fg=white,bg=blue
 #set -g mode-style fg=black,bg=yellow
+
+# Use the xterm-256color terminal
+set -g default-terminal "xterm"
+
+# Apply Tc
+set-option -ga terminal-overrides ",xterm:Tc"
 EOF
 ```
 
@@ -71,6 +77,10 @@ cat > ~/.inputrc << "EOF"
 "\e[B": history-search-forward
 "\e[C": forward-char
 "\e[D": backward-char
+## fix the HOME/END key issue using xterm
+"\e[1~": beginning-of-line
+"\e[4~": end-of-line
+
 EOF
 ```
 
@@ -103,8 +113,10 @@ cat > ~/.bashcfg.sh << "EOF"
 HISTSIZE=10000
 HISTFILESIZE=20000
 
-# Enable vi to edit command history
+# Enable vi to edit command history, and map HOME/END key
 set -o vi
+bind -m vi-insert '"\e[1~": beginning-of-line'
+bind -m vi-insert '"\e[4~": end-of-line'
 
 ##################### prompt ##############################
 # color prompt (long: username & hostname & directory)

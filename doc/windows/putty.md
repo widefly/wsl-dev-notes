@@ -32,9 +32,17 @@ Apply the following settings when creating a new putty profile.  These settings 
 - Connection > SSH > X11, "enable X11 forwarding"
 - Connection > Data, enter the linux username on field "Auto-login username" 
 - Connection > Data, enter "linux" on field terminal-type string  
-  `NOTE`: fix HOME/END key issue
 - Connection > SSH > Auth >Credentials, enter the ppk file on field "Private key file for authentication"
 - Window > Appearance, under Font, select 'Consolas, 8-point'
+
+## About 24-bit color 
+- To enable 24-bit color
+  Connection > Data, enter "xterm" on field terminal-type string  
+- Add lines to ~/.tmux.conf
+  # Use the xterm-256color terminal
+  set -g default-terminal "xterm"
+  # Apply Tc
+  set-option -ga terminal-overrides ",xterm:Tc"
 
 ## App requires XWindows
 - To test X-Windows, it needs to run the Xming.
