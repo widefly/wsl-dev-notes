@@ -9,6 +9,4 @@
 - From the File Explorer, apply the settings below:
   - disable "Hide extensions for known file types"
   - enable "Show hidden file, folder, and drives"
-  - disable "Hide protected operating system files (Recommended)"
-
 
