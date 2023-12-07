@@ -92,8 +92,6 @@
   {
     "workbench.editor.revealIfOpen": true,
     "cSpell.words": [
-      "absdiff",
-      "aiimage",
     ],
     "[python]": {
       "editor.defaultFormatter": "ms-python.black-formatter"
