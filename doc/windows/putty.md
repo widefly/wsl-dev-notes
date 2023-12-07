@@ -31,7 +31,7 @@
 Apply the following settings when creating a new putty profile.  These settings can be applied to "Default Settings" as well.
 - Connection > SSH > X11, "enable X11 forwarding"
 - Connection > Data, enter the linux username on field "Auto-login username" 
-- Connection > Data, enter "linux" on field terminal-type string  
+- Connection > Data, enter "xterm" on field terminal-type string  
 - Connection > SSH > Auth >Credentials, enter the ppk file on field "Private key file for authentication"
 - Window > Appearance, under Font, select 'Consolas, 8-point'
 
