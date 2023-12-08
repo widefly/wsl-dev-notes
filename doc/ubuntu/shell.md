@@ -17,6 +17,7 @@ xfe x11-apps
 ### ~/.tmux.conf
 tmux is a terminal multiplexer 
 ```bash
+## Run the script below
 cat > ~/.tmux.conf << "EOF"
 # set default shell to load and prevent loading .profile for each new session
 set-option -g default-command "/bin/bash"
@@ -72,6 +73,7 @@ EOF
 ### ~/.inputrc
 user-specific configuration file used by the GNU Readline library
 ```bash
+## Run the script below
 cat > ~/.inputrc << "EOF"
 "\e[A": history-search-backward
 "\e[B": history-search-forward
@@ -87,6 +89,7 @@ EOF
 ### ~/.vimrc
 vim config file
 ```bash
+## Run the script below
 cat > ~/.vimrc << "EOF"
 :set background=dark
 :set tabstop=4
@@ -107,6 +110,7 @@ EOF
 ### ~/.bashcfg.sh
 useful shell script to be sourced by ~/.bashrc
 ```bash
+## Run the script below
 cat > ~/.bashcfg.sh << "EOF"
 ##################### history ##############################
 #Enlarge the history.. change the value by adding a 0 at the end
@@ -153,7 +157,6 @@ stty -ixon -ixoff
 
 EOF
 ```
-
 ### add to ~/.bashrc
 Add the following line to ~/.bashrc
 ```bash
