@@ -144,7 +144,7 @@ alias dmesg="dmesg -T"
 export TERM=xterm
 export NCURSES_NO_UTF8_ACS=1
 export LANG="C.UTF-8"
-export DISPLAY=:11.0
+export DISPLAY=:10.0
 
 # undefine CTRL-s/CTRL-q to stop/resume
 stty stop undef
