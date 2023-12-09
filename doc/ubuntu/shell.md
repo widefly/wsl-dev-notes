@@ -148,6 +148,8 @@ alias dmesg="dmesg -T"
 export TERM=xterm
 export NCURSES_NO_UTF8_ACS=1
 export LANG="C.UTF-8"
+
+## Instruct xWin app to connect via display number 10, i.e. port 6010
 export DISPLAY=:10.0
 
 # undefine CTRL-s/CTRL-q to stop/resume

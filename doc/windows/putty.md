@@ -30,12 +30,21 @@
 ## Recommended putty settings
 Apply the following settings when creating a new putty profile.  These settings can be applied to "Default Settings" as well.
 - Connection > SSH > X11, "enable X11 forwarding"  
-  - XMing, a x11 server on Windows, listens on port 6000.
-  - In putty, if x11 forwarding is enabled, it will establish a tunnel that forwards data from port 6010 to ssh client's host port 6000, and perform export of `DISPLAY=localhost:10.0`.  10 is the display number and it also refers to port 6010.
 - Connection > Data, enter the linux username on field "Auto-login username" 
 - Connection > Data, enter "xterm" on field terminal-type string  
 - Connection > SSH > Auth >Credentials, enter the ppk file on field "Private key file for authentication"
 - Window > Appearance, under Font, select 'Consolas, 8-point'
+
+## About x11 forwarding
+- X-server, i.e. XMing on Windows, listens on ssh client's host port 6000 by default.
+- In Putty, if x11 forwarding is enabled
+  - ssh terminal has its environmental variable exported `DISPLAY=localhost:10.0`.  
+    This instructs xWin app to connect to X-server via port 6010, instead of the default 6000.
+  - A reverse forwarding ssh tunnel is established that forwards port 6010 to port 6000, i.e. sshd listens on port 6010 and forwards the traffic to Putty's localhost port 6000.
+  - Thus, xWin app can run on the remote display.
+- In vscode, x11 forwarding is enabled by default. This applies to remote WSL too.
+  - In case of remote WSL, if unix domain socket /tmp/.X11-UNIX is found, it mean x-server is present.
+  - If xWin app runs on the vscode terminal, vscode forwards the data to the unix domain to vscode client's localhost x-server, i.e. unix domain socket -> localhost's 6000.
 
 ## About 24-bit color 
 - To enable 24-bit color  
