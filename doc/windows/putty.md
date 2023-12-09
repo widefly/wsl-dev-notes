@@ -29,7 +29,9 @@
 
 ## Recommended putty settings
 Apply the following settings when creating a new putty profile.  These settings can be applied to "Default Settings" as well.
-- Connection > SSH > X11, "enable X11 forwarding"
+- Connection > SSH > X11, "enable X11 forwarding"  
+  - XMing, a x11 server on Windows, listens on port 6000.
+  - In putty, if x11 forwarding is enabled, it will establish a tunnel that forwards data from port 6010 to ssh client's host port 6000, and perform export of `DISPLAY=localhost:10.0`.  10 is the display number and it also refers to port 6010.
 - Connection > Data, enter the linux username on field "Auto-login username" 
 - Connection > Data, enter "xterm" on field terminal-type string  
 - Connection > SSH > Auth >Credentials, enter the ppk file on field "Private key file for authentication"
