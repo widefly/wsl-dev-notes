@@ -142,8 +142,13 @@ export PROMPT_DIRTRIM=4
 alias update="sudo apt-get update; sudo apt-get -y upgrade"
 alias dmesg="dmesg -T"
 
-## local bin
-[[ -z $TMUX ]] && export PATH=${HOME}/.local/bin:$PATH
+##################### Additional PATH ##############################
+## Add PATH: local bin
+PATH_To_ADD=${HOME}/.local/bin
+## Add PATH: mssql server client tools
+[[ -d /opt/mssql-tools18/bin  ]] PATH_To_ADD=$PATH_To_ADD:/opt/mssql-tools18/bin
+## Export PATH
+[[ -z $TMUX ]] && export PATH=$PATH_To_ADD:$PATH
 
 ##################### terminal ##############################
 # fix strange character
