@@ -146,7 +146,7 @@ alias dmesg="dmesg -T"
 ## Add PATH: local bin
 PATH_To_ADD=${HOME}/.local/bin
 ## Add PATH: mssql server client tools
-[[ -d /opt/mssql-tools18/bin  ]] PATH_To_ADD=$PATH_To_ADD:/opt/mssql-tools18/bin
+[[ -d /opt/mssql-tools18/bin  ]] && PATH_To_ADD=$PATH_To_ADD:/opt/mssql-tools18/bin
 ## Export PATH
 [[ -z $TMUX ]] && export PATH=$PATH_To_ADD:$PATH
 
