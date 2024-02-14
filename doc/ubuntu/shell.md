@@ -150,6 +150,9 @@ PATH_To_ADD=${HOME}/.local/bin
 ## Export PATH
 [[ -z $TMUX ]] && export PATH=$PATH_To_ADD:$PATH
 
+##################### Additional export ##############################
+[[ -z $TMUX ]] && [[ -d /usr/share/dotnet ]] && export DOTNET_ROOT=/usr/share/dotnet
+
 ##################### terminal ##############################
 # fix strange character
 export TERM=xterm
