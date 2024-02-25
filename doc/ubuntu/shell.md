@@ -147,6 +147,8 @@ alias dmesg="dmesg -T"
 PATH_To_ADD=${HOME}/.local/bin
 ## Add PATH: mssql server client tools
 [[ -d /opt/mssql-tools18/bin  ]] && PATH_To_ADD=$PATH_To_ADD:/opt/mssql-tools18/bin
+## Add PATH: WSL nvidia-smi
+[[ -f /usr/lib/wsl/lib/nvidia-smi  ]] && PATH_To_ADD=$PATH_To_ADD:/usr/lib/wsl/lib
 ## Export PATH
 [[ -z $TMUX ]] && export PATH=$PATH_To_ADD:$PATH
 
