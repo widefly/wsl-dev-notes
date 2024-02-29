@@ -10,6 +10,7 @@
         "expandtab",
         "HISTFILESIZE",
         "HISTSIZE",
+        "iperf",
         "ixoff",
         "ixon",
         "laststatus",

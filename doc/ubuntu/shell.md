@@ -10,7 +10,7 @@ sudo apt-get -y update; sudo apt-get -y upgrade
 sudo apt-get -y install \
 build-essential cmake pkg-config git \
 tmux ffmpeg tree vim unzip curl pv jq expect bc less openssh-server \
-xfe x11-apps
+iperf3 xfe x11-apps
 ```
 
 ## Configure essential config files
