@@ -146,7 +146,7 @@ alias dmesg="dmesg -T"
 ## Add PATH: local bin
 PATH_To_ADD=${HOME}/.local/bin
 ## Add PATH: nodejs global on user home, instead of /usr
-[[ -d ~/.npm-global  ]] && PATH_To_ADD=$PATH_To_ADD:~/.npm-global
+[[ -d ~/.npm-global/bin  ]] && PATH_To_ADD=$PATH_To_ADD:~/.npm-global/bin
 ## Add PATH: mssql server client tools
 [[ -d /opt/mssql-tools18/bin  ]] && PATH_To_ADD=$PATH_To_ADD:/opt/mssql-tools18/bin
 ## Add PATH: WSL nvidia-smi
