@@ -149,6 +149,7 @@ PATH_To_ADD=${HOME}/.local/bin
 [[ -d ~/.npm-global/bin  ]] && PATH_To_ADD=$PATH_To_ADD:~/.npm-global/bin
 ## Add PATH: mssql server client tools
 [[ -d /opt/mssql-tools18/bin  ]] && PATH_To_ADD=$PATH_To_ADD:/opt/mssql-tools18/bin
+[[ -d /opt/mssql/bin  ]] && PATH_To_ADD=$PATH_To_ADD:/opt/mssql/bin
 ## Add PATH: WSL nvidia-smi
 [[ -f /usr/lib/wsl/lib/nvidia-smi  ]] && PATH_To_ADD=$PATH_To_ADD:/usr/lib/wsl/lib
 ## Export PATH
