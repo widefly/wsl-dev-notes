@@ -10,7 +10,7 @@ sudo apt-get -y update; sudo apt-get -y upgrade
 sudo apt-get -y install \
 build-essential cmake pkg-config git \
 tmux ffmpeg tree vim unzip curl pv jq expect bc less openssh-server \
-iperf3 xfe x11-apps
+xfe x11-apps
 ```
 
 ## Configure essential config files
@@ -145,13 +145,8 @@ alias dmesg="dmesg -T"
 ##################### Additional PATH ##############################
 ## Add PATH: local bin
 PATH_To_ADD=${HOME}/.local/bin
-## Add PATH: nodejs global on user home, instead of /usr
-[[ -d ~/.npm-global/bin  ]] && PATH_To_ADD=$PATH_To_ADD:~/.npm-global/bin
 ## Add PATH: mssql server client tools
 [[ -d /opt/mssql-tools18/bin  ]] && PATH_To_ADD=$PATH_To_ADD:/opt/mssql-tools18/bin
-[[ -d /opt/mssql/bin  ]] && PATH_To_ADD=$PATH_To_ADD:/opt/mssql/bin
-## Add PATH: WSL nvidia-smi
-[[ -f /usr/lib/wsl/lib/nvidia-smi  ]] && PATH_To_ADD=$PATH_To_ADD:/usr/lib/wsl/lib
 ## Export PATH
 [[ -z $TMUX ]] && export PATH=$PATH_To_ADD:$PATH
 
