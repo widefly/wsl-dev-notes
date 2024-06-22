@@ -144,11 +144,14 @@ alias dmesg="dmesg -T"
 
 ##################### Additional PATH ##############################
 ## Add PATH: local bin
-PATH_To_ADD=${HOME}/.local/bin
+PATH_TO_ADD=${HOME}/.local/bin
 ## Add PATH: mssql server client tools
-[[ -d /opt/mssql-tools18/bin  ]] && PATH_To_ADD=$PATH_To_ADD:/opt/mssql-tools18/bin
+[[ -d /opt/mssql-tools18/bin  ]] && PATH_TO_ADD=$PATH_TO_ADD:/opt/mssql-tools18/bin
+## CUDA 12.1.x
+[[ -d /usr/local/cuda-12.1/bin ]] && PATH_TO_ADD=$PATH_TO_ADD:/usr/local/cuda-12.1/bin
+
 ## Export PATH
-[[ -z $TMUX ]] && export PATH=$PATH_To_ADD:$PATH
+[[ -z $TMUX ]] && export PATH=$PATH_TO_ADD:$PATH
 
 ##################### Additional export ##############################
 [[ -z $TMUX ]] && [[ -d /usr/share/dotnet ]] && export DOTNET_ROOT=/usr/share/dotnet
