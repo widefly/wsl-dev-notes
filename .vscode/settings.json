@@ -6,6 +6,7 @@
         "cpptools",
         "CUDA",
         "CUDNN",
+        "CUPTI",
         "dbaeumer",
         "DIRTRIM",
         "esbenp",
