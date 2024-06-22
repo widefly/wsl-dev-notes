@@ -5,6 +5,7 @@
         "Consolas",
         "cpptools",
         "CUDA",
+        "CUDNN",
         "dbaeumer",
         "DIRTRIM",
         "esbenp",

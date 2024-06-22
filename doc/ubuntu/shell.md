@@ -156,6 +156,14 @@ PATH_TO_ADD=${HOME}/.local/bin
 ##################### Additional export ##############################
 [[ -z $TMUX ]] && [[ -d /usr/share/dotnet ]] && export DOTNET_ROOT=/usr/share/dotnet
 
+## CUDA and cuDNN, e.g. CUDA 12.1.x and cuDNN 8.9.7
+CUDA_LIB=/usr/local/cuda-12.1/lib64
+CUDNN_LIB=~/cuda/cudnn/cudnn-8.9.7-cuda-12.1.1/lib
+[[ -z $TMUX ]] && [[ -d $CUDA_LIB ]] && LIB_TO_ADD=$CUDA_LIB:$LIB_TO_ADD
+[[ -z $TMUX ]] && [[ -d $CUDA_LIB ]] && LIB_TO_ADD=$CUDNN_LIB:$LIB_TO_ADD
+
+export LD_LIBRARY_PATH=$LIB_TO_ADD:$LD_LIBRARY_PATH
+
 ##################### terminal ##############################
 # fix strange character
 export TERM=xterm
