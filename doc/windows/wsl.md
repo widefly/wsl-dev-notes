@@ -11,8 +11,8 @@
    Recommended to install an more updated Ubuntu, e.g. `Ubuntu 22.04.6 LTS` as of Nov 2024
 1. Once installed, the Ubuntu Linux terminal can be opened by a Windows app.
 1. `wsl -l -v` to list the installed distributions  
-   <img src="../images/wslListDistros.png" width="400">
-
+   <img src="../images/wslListDistros.png" width="400">  
+   NOTE: prefix * marks the default WSL instance
 
 
 ## Important WSL settings
