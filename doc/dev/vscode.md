@@ -8,8 +8,34 @@
   ```json
   {
     ....
-    "editor.fontSize": 11,
-    "editor.minimap.enabled": false
+
+    // default font size
+    // - 10 is good for 27" Monitor
+    // - 11 is good for small screen, e.g. notebook 12"
+    "editor.fontSize": 10.5,
+    "markdown.preview.fontSize": 10.5,
+
+    // Jump to the opened file on upon F12, i.e. go to definition
+    "workbench.editor.revealIfOpen": true,
+
+    // terminal
+    // - For Windows, suggested to open cmd.exe as default. 
+    //   Otherwise, it use powershell
+    "terminal.integrated.fontSize": 10.5,
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+
+    // git
+    "scm.showHistoryGraph": false,
+    "git.enableSmartCommit": true,  
+
+    // auto format on save
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+
+    // misc
+    "editor.minimap.enabled": false,
+
+
   }
   ```
 
