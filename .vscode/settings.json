@@ -13,6 +13,7 @@
         "expandtab",
         "HISTFILESIZE",
         "HISTSIZE",
+        "humao",
         "inputrc",
         "iperf",
         "ixoff",

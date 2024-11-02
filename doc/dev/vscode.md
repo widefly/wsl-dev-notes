@@ -63,6 +63,8 @@ In the vscode search field, enter the below to install extensions.  These can be
     `ext install ms-python.black-formatter`
   - ShellCheck  
     `ext install timonwong.shellcheck`
+  - Rest Client  
+    `ext install humao.rest-client`
   - Git Graph  
     `ext install mhutchie.git-graph`
   - PDF Viewer  
