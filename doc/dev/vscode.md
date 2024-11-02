@@ -37,10 +37,14 @@ In the vscode search field, enter the below to install extensions.  These can be
     `ext install ms-python.black-formatter`
   - ShellCheck  
     `ext install timonwong.shellcheck`
+  - Git Graph
+    `ext install mhutchie.git-graph`
   - PDF Viewer  
     `ext install mathematic.vscode-pdf`
   - ESLint  
     `ext install dbaeumer.vscode-eslint`
+  - YAML
+    `ext install redhat.vscode-yaml`
   - C/C++  
     `ext install ms-vscode.cpptools`
   - C/C++ Extension Pack  
