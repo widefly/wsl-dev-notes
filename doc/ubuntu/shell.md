@@ -186,9 +186,21 @@ Add the following line to ~/.bashrc
 source ~/.bashcfg.sh
 ```
 
+### timezone
+- Configure system timezone
+- Timezone is a global system setting (not user setting)
+```bash
+## list all available timezones
+timedatectl list-timezones
+## find out the one desired, e.g. Hongkong
+timedatectl list-timezones | grep -i hongkong
+## apply new timezone, e.g. Hongkong
+sudo timedatectl set-timezone Hongkong
+```
+
 ### sudoers
 - Add an username to sudoers eliminates entering password for every sudo command.
-- Add the following line after running a command `sudo visudo` (replace xxx with the desire username)
+- Add the following line after running a command `sudo visudo` (replace xxx with the desired username)
 ```bash
 xxxxx ALL=(ALL) NOPASSWD:ALL
 ```

@@ -5,6 +5,29 @@
 sudo apt-get install -y openssh-server
 ```
 
+## Configure openssh server 
+Edit /etc/ssh/sshd_config, apply changes a few lines of settings
+```bash
+sudo vi /etc/ssh/sshd_config`
+```
+
+```bash
+...
+## Avoid kill idle session
+## Send keepalive message to client every xx seconds
+ClientAliveInterval 10
+## Sets the maximum number of keepalive messages that can be sent without a response from the client before the connection is terminated.
+## This helps prevent connections from being kept open indefinitely if the client is unresponsive.
+ClientAliveCountMax 3
+...
+```
+
+To apply changes  
+```bash
+sudo systemctl restart ssh
+```
+
+
 ## Configure ~/.ssh
 ```bash
 
