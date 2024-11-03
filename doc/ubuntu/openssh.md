@@ -27,6 +27,14 @@ To apply changes
 sudo systemctl restart ssh
 ```
 
+To list all effective sshd settings
+```bash
+## List all settings
+sudo sshd -T 
+## List desired settings, e.g. ClientAliveInterval, ClientAliveCountMax, TCPKeepAlive
+sudo sshd -T | grep -i alive
+```
+
 
 ## Configure ~/.ssh
 ```bash
