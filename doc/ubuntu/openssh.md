@@ -8,7 +8,7 @@ sudo apt-get install -y openssh-server
 ## Configure openssh server 
 Edit /etc/ssh/sshd_config, apply changes a few lines of settings
 ```bash
-sudo vi /etc/ssh/sshd_config`
+sudo vi /etc/ssh/sshd_config
 ```
 
 ```bash

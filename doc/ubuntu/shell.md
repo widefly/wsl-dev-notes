@@ -99,7 +99,7 @@ cat > ~/.vimrc << "EOF"
 ":set noexpandtab           " makefile needs real TAB
 :set expandtab
 :set shiftwidth=4
-:set autoindent
+":set autoindent
 :set ruler
 :set showmode
 :set nu
@@ -205,3 +205,8 @@ sudo timedatectl set-timezone Hongkong
 xxxxx ALL=(ALL) NOPASSWD:ALL
 ```
 
+### .vimrc for root
+First, run as root and copy .vimrc
+```bash
+sudo su -
+```
