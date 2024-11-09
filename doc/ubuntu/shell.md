@@ -9,7 +9,7 @@ sudo apt-get -y update; sudo apt-get -y upgrade
 ```bash
 sudo apt-get -y install \
 build-essential cmake pkg-config git \
-tmux ffmpeg tree vim unzip curl pv jq expect bc less openssh-server \
+acl tmux ffmpeg tree vim unzip curl pv jq expect bc less openssh-server \
 xfe x11-apps
 ```
 
