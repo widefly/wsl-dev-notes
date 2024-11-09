@@ -42,60 +42,55 @@
 ## Extensions
 In the vscode search field, enter the below to install extensions.  These can be installed via extension GUI.
 
-- Install extensions locally
+- vscode on WSL/remote SSH host
   - WSL  
     `ext install ms-vscode-remote.remote-wsl` 
   - Remote - SSH  
     `ext install ms-vscode-remote.remote-ssh` 
 
-- Connect to WSL and install extensions on WSL
-  - Essential
-    - Code Spell Checker  
-      `ext install streetsidesoftware.code-spell-checker`
-    - Prettier - Code formatter  
-      `ext install esbenp.prettier-vscode`
-    - Markdown All in One  
-      `ext install yzhang.markdown-all-in-one`
-    - Rest Client  
-      `ext install humao.rest-client`
-    - Git Graph  
-      `ext install mhutchie.git-graph`
-    - PDF Viewer  
-      `ext install mathematic.vscode-pdf`
-    - Excel Viewer  
-      `ext install grapecity.gc-excelviewer`
-    - YAML  
-      `ext install redhat.vscode-yaml`
-    - WSL  
-      `ext install ms-vscode-remote.remote-wsl`
-    - Remote - SSH  
-      `ext install ms-vscode-remote.remote-ssh`
-  - Python
-    - Python  
-      `ext install ms-python.python`
-    - Pylance  
-      `ext install ms-python.vscode-pylance`
-    - Black Formatter  
-      `ext install ms-python.black-formatter`
-  - C#/.NET
-    - C#  
-      `ext install ms-dotnettools.csharp`
-  - MSSQL
-    - SQL Server (mssql)  
-      `ext install ms-mssql.mssql`
-  - Shell script
-    - ShellCheck  
-      `ext install timonwong.shellcheck`
-    - Shell-format  
-      `ext install foxundermoon.shell-format`
-  - TypeScript/JavaScript
-    - ESLint  
-      `ext install dbaeumer.vscode-eslint`
-  - C/C++
-    - C/C++  
-      `ext install ms-vscode.cpptools`
-    - C/C++ Extension Pack  
-      `ext install ms-vscode.cpptools-extension-pack`
+- Essential
+  - Code Spell Checker  
+    `ext install streetsidesoftware.code-spell-checker`
+  - Prettier - Code formatter  
+    `ext install esbenp.prettier-vscode`
+  - Git Graph  
+    `ext install mhutchie.git-graph`
+  - Markdown All in One  
+    `ext install yzhang.markdown-all-in-one`
+  - Rest Client  
+    `ext install humao.rest-client`
+  - PDF Viewer  
+    `ext install mathematic.vscode-pdf`
+  - Excel Viewer  
+    `ext install grapecity.gc-excelviewer`
+  - YAML  
+    `ext install redhat.vscode-yaml`
+- Python
+  - Python  
+    `ext install ms-python.python`
+  - Pylance  
+    `ext install ms-python.vscode-pylance`
+  - Black Formatter  
+    `ext install ms-python.black-formatter`
+- C#/.NET
+  - C#  
+    `ext install ms-dotnettools.csharp`
+- MSSQL
+  - SQL Server (mssql)  
+    `ext install ms-mssql.mssql`
+- Shell script
+  - ShellCheck  
+    `ext install timonwong.shellcheck`
+  - Shell-format  
+    `ext install foxundermoon.shell-format`
+- TypeScript/JavaScript
+  - ESLint  
+    `ext install dbaeumer.vscode-eslint`
+- C/C++
+  - C/C++  
+    `ext install ms-vscode.cpptools`
+  - C/C++ Extension Pack  
+    `ext install ms-vscode.cpptools-extension-pack`
 
 ## github integration
 - (content to be added)
