@@ -65,6 +65,8 @@ In the vscode search field, enter the below to install extensions.  These can be
     `ext install grapecity.gc-excelviewer`
   - YAML  
     `ext install redhat.vscode-yaml`
+  - vscode-icons  
+    `ext install vscode-icons-team.vscode-icons`
 - Python
   - Python  
     `ext install ms-python.python`
