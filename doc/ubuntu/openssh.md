@@ -51,9 +51,9 @@ if [[ ! -f ~/.ssh/config ]]; then
     cat > ~/.ssh/config << "EOF"
 # Personal GitHub account
 Host github.com
-HostName github.com
-User git
-IdentityFile ~/.ssh/id_rsa_personal
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa_personal
 
 # default
 IdentityFile ~/.ssh/id_rsa_personal
@@ -89,11 +89,14 @@ fi
 ```
 
 
-## start/stop openssh server
+## start/restart/stop openssh server
 ```bash
 ## Start ssh 
-sudo service ssh start
+sudo systemctl start ssh
+
+## Restart ssh 
+sudo systemctl restart ssh
 
 ## Stop ssh
-sudo service ssh stop
+sudo systemctl stop ssh
 ```
