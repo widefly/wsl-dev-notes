@@ -53,11 +53,11 @@ if [[ ! -f ~/.ssh/config ]]; then
 Host github.com
   HostName github.com
   User git
-  IdentityFile ~/.ssh/id_rsa_personal
+  IdentityFile ~/.ssh/id_ed25519_personal
 
 # default
 Host *
-  IdentityFile ~/.ssh/id_rsa_personal
+  IdentityFile ~/.ssh/id_ed25519_personal
 EOF
     chmod 700 ~/.ssh/config
 else
@@ -74,21 +74,25 @@ fi
 
 ## double check file permissions
 [[ -d ~/.ssh  ]] && chmod 700 ~/.ssh
-[[ -f ~/.ssh/config ]] && chmod 700 ~/.ssh/config
-[[ -f ~/.ssh/authorized_keys ]] && chmod 700 ~/.ssh/authorized_keys
+[[ -f ~/.ssh/config ]] && chmod 600 ~/.ssh/config
+[[ -f ~/.ssh/authorized_keys ]] && chmod 600 ~/.ssh/authorized_keys
 
 ## Generate RSA key
 if [[ ! -f ~/.ssh/id_rsa_personal ]]; then
     echo ""
-    echo -n "Generate ~/.ssh/id_rsa_personal (Y|N)? "
+    echo -n "Generate ~/.ssh/id_ed25519_personal (Y|N)? "
     read answer
     if [[ $answer =~ ^y|Y ]]; then
-        echo "Generating ~/.ssh/id_rsa_personal..."
-        ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa_personal -q -P ""   
+        echo "Generating ~/.ssh/id_ed25519_personal..."
+        ssh-keygen -t ed25519 -C "personal key generated on $(date +"%Y-%m-%dT%H:%M:%S")" -f ~/.ssh/id_ed25519_personal -q -P ""
     fi
 fi
 ```
 
+## Generate key pair (optional)
+```bash
+ssh-keygen -t ed25519 -C "personal key generated on $(date +"%Y-%m-%dT%H:%M:%S")" -f ~/.ssh/id_ed25519_personal -q -P ""
+```
 
 ## start/restart/stop openssh server
 ```bash

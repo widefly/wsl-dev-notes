@@ -8,16 +8,24 @@
 ## Installation
 1. Install puTTY  
    https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
-2. Install Xming, a X-Windows manager for Windows.  
+2. (Optional) Install Xming, a X-Windows manager for Windows.  
    NOTE: Ask development lead to obtain the installation file.
 
 ## Convert rsa key to putty key (*.ppk)
 - Without private key setup, SSH requires users to supply username and password to authenticate themselves on each SSH connection.
 - To simplify the connection, that avoids supplying username and password every time, and to strengthen the authentication security, private/public key setup is highly recommended.
-- A private personal private key should be generated in RSA format.
+- A private personal private key should be generated in RSA or ed25519 format  
+  NOTE: RSA is an older and the most compatible format
   ```bash
-  ## Under WSL, Create private and public key in RSA format 
-  ssh-keygen -t rsa -b 4096 -f <privateKeyFile> -q -P ""  
+  ## Under WSL, Create private and public key in RSA format
+  ssh-keygen -t rsa -b 4096 \
+    -C "personal key generated on $(date +"%Y-%m-%dT%H:%M:%S")" \
+    -f ~/.ssh/id_rsa_personal -q -P ""  
+  
+  ## Under WSL, Create private and public key in ed5519 format
+  ssh-keygen -t ed25519 \
+    -C "personal key generated on $(date +"%Y-%m-%dT%H:%M:%S")" \
+    -f ~/.ssh/id_ed25519_personal -q -P ""  
   ```
   NOTE: Refer to [openssh](../ubuntu/openssh.md) for details.
 - Since private key represents an user identity, the key must be stored and placed in a well protected location. In Ubuntu, private key is stored in ~/.ssh folder.  
