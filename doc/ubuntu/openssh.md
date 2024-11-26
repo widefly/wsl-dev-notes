@@ -56,7 +56,8 @@ Host github.com
   IdentityFile ~/.ssh/id_rsa_personal
 
 # default
-IdentityFile ~/.ssh/id_rsa_personal
+Host *
+  IdentityFile ~/.ssh/id_rsa_personal
 EOF
     chmod 700 ~/.ssh/config
 else
