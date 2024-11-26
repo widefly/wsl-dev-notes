@@ -1,9 +1,33 @@
 # Developer note using WSL2
 
 ## Overview
-1. First, Windows Subsystem for Linux, i.e. `WSL` is the development platform that will be extensively used like developing on a real and typical Linux, e.g. Ubuntu.
-2. All developed programs should run the WSL's instance instead of on the Windows host. For example, python scripts run on Ubuntu, instead of on Windows.
-3. The key reason to use to WSL is to develop, debug, test the programs and configure the deployment scripts on the platform which is the same as that of the cloud Linux environment.
+1. Windows Subsystem for Linux, i.e. `WSL` enables running of Linux distributions on Windows host.  
+1. Ubuntu is one of the most widely used Linux distributions and the preferred choice of WSL installation.  
+1. Key reasons of Ubuntu popularity
+   - large community
+   - strong support, e.g. Long-Term Support (TLS)
+   - vast amount of knowledge base and tutorials in the web
+   - extensive support by Cloud provider, e.g. AWS, Azure, GCP, AliCloud
+1. Windows is renowned for its
+   - user friendly desktop GUI experience
+   - comprehensive utilities and apps
+   - software and hardware compatibility.  
+  
+   Linux is renowned for its
+   - low memory footprint, high performance and terminal based
+   - flexible development and deployment env, especially for server side/backend env.
+   - extensive CLIs and utilities
+   - Very cost effective in deployment and ongoing maintenance, due to its open source nature
+   - high scalability and security
+1. WSL as a development platform has the best of both worlds
+   - Familiar GUI and desktop experience
+   - Cloud Linux alike env, i.e. you dev and test on WSL/Linux like on cloud.
+1. Seamless Windows host + WSL/Linux integration
+   - Filesystem, e.g. WSL accesses files from Windows host, and vice versa
+   - Network access, e.g. WSL accesses MSSQL on Windows host.
+   - Remote development, e.g. vscode + WSL
+   - Multiple Linux distributions
+   
 
 ## Windows settings
 Follow the steps below to configure the environment.

@@ -1,14 +1,15 @@
 # WSL
 
 ## WSL Installation and Ubuntu
+https://learn.microsoft.com/en-us/windows/wsl/install
 1. WSL is `Windows Subsystem for Linux`.  
-   `NOTE:` Use newer WSL2 instead of the older WSL1.  WSL2 has many performance improvement over WSL1.
+   `NOTE:` Always installs WSL2 instead of the older WSL1.  WSL2 has many performance improvement over WSL1.
 1. Before installing WSL, open "Turn Windows features on or off"  
    <img src="../images/turnWindowsFeaturesOnOrOff.png" width="400">
    - enable `Virtual Machine Platform`
    - enable `Windows Subsystem for Linux`
 1. To setup WSL2, simply install an Ubuntu Linux via Microsoft Store.  
-   Recommended to install an more updated Ubuntu, e.g. `Ubuntu 22.04.6 LTS` as of Nov 2024
+   Recommended to install an more updated Ubuntu, e.g. `Ubuntu 22.04.5 LTS` as of Nov 2024
 1. Once installed, the Ubuntu Linux terminal can be opened by a Windows app.
 1. `wsl -l -v` to list the installed distributions  
    <img src="../images/wslListDistros.png" width="400">  
@@ -16,6 +17,7 @@
 
 
 ## Important WSL settings
+https://learn.microsoft.com/en-us/windows/wsl/wsl-config
 ### Port forwarding (localhost to WSL Linux)
 - When a WSL Linux instance is running, it was assigned with an IP address that is different from that of the Windows host.  For example, Windows host: `192.168.0.11` and Ubuntu: `172.18.167.234`
 - By default, listening port on the WSL Linux cannot be accessed by Windows's localhost address.  

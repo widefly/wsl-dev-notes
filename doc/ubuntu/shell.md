@@ -1,7 +1,7 @@
 # Bash shell configurations
 
 ## Essential tools
-- Below install packages, update the package index and upgrade the existing packages
+- Before installing essential packages, update the package index and upgrade the existing packages
 ```bash
 sudo apt-get -y update; sudo apt-get -y upgrade
 ```
@@ -11,6 +11,11 @@ sudo apt-get -y install \
 build-essential cmake pkg-config git \
 acl tmux ffmpeg tree vim unzip curl pv jq expect bc less openssh-server \
 xfe x11-apps
+```
+
+-  Install x11 utilities (optional)
+```bash
+sudo apt-get -y install xfe x11-apps
 ```
 
 ## Configure essential config files
