@@ -94,5 +94,3 @@ In the vscode search field, enter the below to install extensions.  These can be
   - C/C++ Extension Pack  
     `ext install ms-vscode.cpptools-extension-pack`
 
-## github integration
-- (content to be added)
