@@ -46,7 +46,7 @@ Follow the steps below to configure the environment.
 1. Putty, i.e. ssh client, [settings](./doc/windows/putty.md)
 1. Create a putty profile for WSL  
    - Hostname: localhost
-   - Connection > Data, enter the Linux username to "AUto-login username"
+   - Connection > Data, enter the Linux username to "Auto-login username"
    - Connection > SSH > Auth > Credentials, select the ppk private file to "Private key file for authentication"
    - Save the profile by entering a name "WSL" in saved sessions and press save.
 

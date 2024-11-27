@@ -1,9 +1,10 @@
 # Windows settings
 
 ## Essential tools/apps
+1. Change "Command Prompt" as the default profile.
 1. Chrome browser: Install chrome and set it as the default browser.
-2. vscode: Refer to [vscode](../dev/vscode.md)
-3. PuTTY: SSH client for Windows. Refer to [PuTTY](./putty.md)
+1. vscode: Refer to [vscode](../dev/vscode.md)
+1. PuTTY: SSH client for Windows. Refer to [PuTTY](./putty.md)
 
 ## Misc
 - From the File Explorer, apply the settings below:
