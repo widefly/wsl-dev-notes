@@ -15,7 +15,8 @@
 - Without private key setup, SSH requires users to supply username and password to authenticate themselves on each SSH connection.
 - To simplify the connection, that avoids supplying username and password every time, and to strengthen the authentication security, private/public key setup is highly recommended.
 - A private personal private key should be generated in RSA or ed25519 format  
-  NOTE: RSA is an older and the most compatible format
+  NOTE: ed25519 is the modern format but RSA is the most compatible one  
+
   ```bash
   ## Under WSL, Create private and public key in RSA format
   ssh-keygen -t rsa -b 4096 \
@@ -29,7 +30,7 @@
   ```
   NOTE: Refer to [openssh](../ubuntu/openssh.md) for details.
 - Since private key represents an user identity, the key must be stored and placed in a well protected location. In Ubuntu, private key is stored in ~/.ssh folder.  
-- In Windows, it is recommended to store in user directory, e.g. %userprofile%\putty.
+- In Windows, it is recommended to store in user directory, e.g. %userprofile%\.ssh.
 - RSA private key must be converted into putty format to perform authentication.  
   Run PuTTYgen, Conversions > Import key. 
   - Select the RSA key (private key copied from the Ubuntu ~/.ssh)

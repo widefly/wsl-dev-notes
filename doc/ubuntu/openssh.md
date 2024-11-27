@@ -91,7 +91,9 @@ fi
 
 ## Generate key pair (optional)
 ```bash
-ssh-keygen -t ed25519 -C "personal key generated on $(date +"%Y-%m-%dT%H:%M:%S")" -f ~/.ssh/id_ed25519_personal -q -P ""
+ssh-keygen -t ed25519 \
+-C "personal key generated on $(date +"%Y-%m-%dT%H:%M:%S")" \
+-f ~/.ssh/id_ed25519_personal -q -P ""
 ```
 
 ## start/restart/stop openssh server
