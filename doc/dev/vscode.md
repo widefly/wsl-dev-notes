@@ -42,13 +42,13 @@
 ## Extensions
 In the vscode search field, enter the below to install extensions.  These can be installed via extension GUI.
 
-- vscode on WSL/remote SSH host
+- vscode on WSL/remote SSH host (installed on Windows host)
   - WSL  
     `ext install ms-vscode-remote.remote-wsl` 
   - Remote - SSH  
     `ext install ms-vscode-remote.remote-ssh` 
 
-- Essential
+- Essential (installed on Windows hosts or WSL or remote SSH host)
   - Code Spell Checker  
     `ext install streetsidesoftware.code-spell-checker`
   - Prettier - Code formatter  
