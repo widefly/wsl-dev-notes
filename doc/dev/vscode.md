@@ -103,3 +103,6 @@ git config --global user.email <email>
 git config --global push.default simple
 git config --global pull.rebase false
 ```
+Git Extension (highly recommended)
+  - Git Graph  
+    `ext install mhutchie.git-graph`
