@@ -94,3 +94,12 @@ In the vscode search field, enter the below to install extensions.  These can be
   - C/C++ Extension Pack  
     `ext install ms-vscode.cpptools-extension-pack`
 
+
+## Git integration
+Most basic settings
+```bash
+git config --global user.name <username>
+git config --global user.email <email>
+git config --global push.default simple
+git config --global pull.rebase false
+```
