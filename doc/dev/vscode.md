@@ -35,6 +35,12 @@
     // misc
     "editor.minimap.enabled": false,
 
+    // Enable auto format for Jupyter notebook
+    "notebook.defaultFormatter": "ms-python.black-formatter",
+    "notebook.formatOnCellExecution": true,
+    "notebook.formatOnSave.enabled": true
+
+
 
   }
   ```
