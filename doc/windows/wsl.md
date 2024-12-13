@@ -18,7 +18,7 @@ https://learn.microsoft.com/en-us/windows/wsl/install
 
 ## Important WSL settings
 https://learn.microsoft.com/en-us/windows/wsl/wsl-config
-### Port forwarding (localhost to WSL Linux)
+### Port forwarding (localhost to WSL Linux)  
 - When a WSL Linux instance is running, it was assigned with an IP address that is different from that of the Windows host.  For example, Windows host: `192.168.0.11` and Ubuntu: `172.18.167.234`
 - By default, listening port on the WSL Linux cannot be accessed by Windows's localhost address.  
   For example, http://localhost:3000 will not connect to the listening port 3000 on WSL Linux.
