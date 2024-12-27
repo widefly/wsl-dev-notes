@@ -78,7 +78,7 @@ This recommended settings needs installation of openssh server. Refer to openssh
 - To set a Linux distribution as the default WSL Linux, run `wsl --set-default xxxx` where xxxx is the Linux distribution name.
 
 ## Copy files between Windows host and Linux
-- When an Linux distribution is installed, its system root directory is mapped to Windows network shares under `\\wsl$`
-- For example, `\\wsl$\Ubuntu-22.04` is the network share that maps to Ubuntu 22.04 Linux.
+- When an Linux distribution is installed, its system root directory is mapped to Windows network shares under `\\wsl.localhost`
+- For example, `\\wsl.localhost\Ubuntu-22.04` is the network share that maps to Ubuntu 22.04 Linux.
 - To facilitate files/folders access, map a network drive, e.g. W:\, to the network share.
 - Within the WSL, /mnt/c maps to Windows host's drive C, so as /mnt/d to drive D.
