@@ -36,7 +36,8 @@
 
   NOTE:  
   - ed25519 is the modern format but RSA is the most compatible one
-  - Refer to [openssh](../ubuntu/openssh.md) for details.
+  - To authorize a private key to access Linux, it needs setting up the authorization in ~/.ssh/authorized_keys.  
+    For details, please refer to [openssh](../../doc/ubuntu/openssh.md#generate-key-pair-and-authorize-it-optional).
 
 - Since private key represents an user identity, the key must be stored and placed in a well protected location. In Ubuntu, private key is stored in ~/.ssh folder.
 - In Windows, it is recommended to store in user directory, e.g. %userprofile%\\.ssh.
