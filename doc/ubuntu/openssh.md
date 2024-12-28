@@ -105,7 +105,7 @@ ssh-keygen -t ed25519 \
 -C "personal key generated on $(date +"%Y-%m-%dT%H:%M:%S")" \
 -f ~/.ssh/id_ed25519_personal -q -P ""
 
-## To authorize access to Linux, add your public key too ~/.ssh/authorized_keys
+## To authorize access to Linux, add your public key to ~/.ssh/authorized_keys
 ## This tells OpenSSH server that the corresponding private key is authorized to access the Linux
 cat ~/.ssh/id_ed25519_personal.pub >> ~/.ssh/authorized_keys
 ```
