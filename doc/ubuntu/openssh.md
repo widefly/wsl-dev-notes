@@ -35,6 +35,8 @@ sudo sshd -T | grep -i alive
 
 
 ## Configure ~/.ssh
+- The script generate ~/.ssh directory and files required by openSSH.
+- It will prompt if you want to generate a public/private key pair.  You may skip this generation and create manually.
 ```bash
 
 ## Create the ssh directory
@@ -83,6 +85,8 @@ if [[ ! -f ~/.ssh/id_rsa_personal ]]; then
     if [[ $answer =~ ^y|Y ]]; then
         echo "Generating ~/.ssh/id_ed25519_personal..."
         ssh-keygen -t ed25519 -C "personal key generated on $(date +"%Y-%m-%dT%H:%M:%S")" -f ~/.ssh/id_ed25519_personal -q -P ""
+        echo "Adding public key to ~/.ssh/authorized_keys..."
+        cat ~/.ssh/id_ed25519_personal >> ~/.ssh/authorized_keys
     fi
 fi
 ```
