@@ -86,7 +86,7 @@ if [[ ! -f ~/.ssh/id_rsa_personal ]]; then
         echo "Generating ~/.ssh/id_ed25519_personal..."
         ssh-keygen -t ed25519 -C "personal key generated on $(date +"%Y-%m-%dT%H:%M:%S")" -f ~/.ssh/id_ed25519_personal -q -P ""
         echo "Adding public key to ~/.ssh/authorized_keys..."
-        cat ~/.ssh/id_ed25519_personal >> ~/.ssh/authorized_keys
+        cat ~/.ssh/id_ed25519_personal.pub >> ~/.ssh/authorized_keys
     fi
 fi
 ```
