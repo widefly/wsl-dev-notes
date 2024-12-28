@@ -4,9 +4,9 @@
 
 - Accessing Linux is mostly performed via a text-based program called `SSH Client` (Secure Shell) , `terminal` or `console`.
 - In Windows, to directly access WSL/Linux, simply run `wsl` or `cmd` then `wsl`.  
-  However, it is not a general way to access Linux but is limited to Windows and lacks of GUI and many useful features.
-- In Linux, `SSH` is the de-facto standard because of its strong security, remote access, and many features like tunneling and remote commands.
-- In fact, most developers use 3rd party SSH clients like `PuTTY`, which is one of the most used SSH client on Windows.
+  However, it is not a general way to access Linux but is limited to Windows.  It also lacks of GUI and many useful features.
+- In Linux, `SSH Client` is the de-facto standard because of its strong security, remote access, and many features like tunneling and remote commands.
+- In fact, most developers use 3rd party SSH GUI clients.  For example, `PuTTY` is one of the most used SSH client for Windows.
 
 ## Installation
 
@@ -37,11 +37,11 @@
   NOTE: Refer to [openssh](../ubuntu/openssh.md) for details.
 
 - Since private key represents an user identity, the key must be stored and placed in a well protected location. In Ubuntu, private key is stored in ~/.ssh folder.
-- In Windows, it is recommended to store in user directory, e.g. %userprofile%\.ssh.
+- In Windows, it is recommended to store in user directory, e.g. %userprofile%\\.ssh.
 - RSA private key must be converted into putty format to perform authentication.  
   Run PuTTYgen, Conversions > Import key.
   - Select the RSA key (private key copied from the Ubuntu ~/.ssh)
-  - Save putty private key (ppk) to the %userprofile%\putty directory.
+  - Save putty private key (ppk) to a safe directory, e.g. %userprofile%\\putty.
 
 ## Recommended putty settings
 
