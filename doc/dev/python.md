@@ -10,7 +10,7 @@
   ```
 - Install pyenv by running the bash script
   ```bash
-  curl https://pyenv.run | bash  
+  curl -fsSL https://pyenv.run | bash
   ```
 - Append the below to ~/.bashrc
   ```bash
