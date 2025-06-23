@@ -15,14 +15,13 @@
 - Append the below to ~/.bashrc
   ```bash
   ## NOTE:
-  ## - original pyenv instruction has no checking of PATH env
-  ## - However, it is required to avoid adding the pyenv paths twice when using tmux or some other tools like vscode 
-  if [[ ! $PATH =~ "/pyenv-virtualenv/" ]]; then
-    export PYENV_ROOT="$HOME/.pyenv"
+  ## - Original pyenv instruction has no checking of $PYENV_ROOT/bin that may already been existed in the PATH var
+  ## - This avoids the duplication
+  export PYENV_ROOT="$HOME/.pyenv"
+  if [[ ! $PATH =~ "$PYENV_ROOT/bin" ]]; then
     [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-    eval "$(pyenv init -)"
-    eval "$(pyenv virtualenv-init -)"
   fi
+  eval "$(pyenv init - bash)"
   ```
 ### pyenv useful commands
 - Check pyenv version  
