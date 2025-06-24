@@ -86,8 +86,16 @@ cat > ~/.inputrc << "EOF"
 ## fix the HOME/END key issue using xterm
 "\e[1~": beginning-of-line
 "\e[4~": end-of-line
+## fix the HOME/END key issue using other terminal
+"\e[7~": beginning-of-line
+"\e[8~": end-of-line
+
 ## enable paste command + input text without waiting, e.g. python + multiline code
 set enable-bracketed-paste off
+
+## optional
+set bell-style none
+set completion-ignore-case on
 
 EOF
 ```
