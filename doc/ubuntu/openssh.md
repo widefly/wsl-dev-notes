@@ -21,7 +21,22 @@ ClientAliveInterval 10
 ## Sets the maximum number of keepalive messages that can be sent without a response from the client before the connection is terminated.
 ## This helps prevent connections from being kept open indefinitely if the client is unresponsive.
 ClientAliveCountMax 3
-```
+```    
+  
+For better access control, e.g. public key only, apply the below
+```bash
+## Disable password authentication
+PasswordAuthentication no
+## Disable challenge-response (e.g., keyboard-interactive)
+ChallengeResponseAuthentication no
+## Only allow public key authentication
+PubkeyAuthentication yes
+## Disable root login or allow only via key
+PermitRootLogin prohibit-password
+
+## Allow only specific users (optional)
+#AllowUsers ubuntu
+```  
 
 To apply changes
 
