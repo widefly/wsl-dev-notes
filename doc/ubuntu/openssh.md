@@ -32,6 +32,7 @@ ChallengeResponseAuthentication no
 ## Only allow public key authentication
 PubkeyAuthentication yes
 ## Disable root login or allow only via key
+## NOTE: PermitRootLogin  without-password is the same (older format)
 PermitRootLogin prohibit-password
 
 ## Allow only specific users (optional)
