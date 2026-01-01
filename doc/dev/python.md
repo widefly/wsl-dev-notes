@@ -112,7 +112,10 @@
       "./src/lib"
     ],
     "python.analysis.exclude": [
-      "./out"
+      "./out", 
+      "./temp",
+      "./.venv",
+      "./winEnv"
     ]
   }
   ```

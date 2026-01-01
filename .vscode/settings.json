@@ -44,6 +44,7 @@
         "timedatectl",
         "timonwong",
         "tput",
+        "venv",
         "vimrc",
         "virtualenv",
         "xclock",
