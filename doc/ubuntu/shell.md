@@ -205,9 +205,10 @@ source ~/.bashcfg.sh
 ## list all available timezones
 timedatectl list-timezones
 ## find out the one desired, e.g. Hongkong
-timedatectl list-timezones | grep -i hongkong
+timedatectl list-timezones | grep -i kong
 ## apply new timezone, e.g. Hongkong
-sudo timedatectl set-timezone Hongkong
+sudo timedatectl set-timezone Asia/Hong_Kong
+
 ```
 
 ### sudoers
