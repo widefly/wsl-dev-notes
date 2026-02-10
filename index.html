@@ -1,1 +1,144 @@
-hello world
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Come to me!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    /* Reset */
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    /* Universe background */
+    body {
+      background: radial-gradient(circle at bottom, #0a1a3a 0%, #020814 70%);
+      color: white;
+    }
+
+    /* Stars */
+    .stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .star {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: twinkle infinite ease-in-out;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 1; }
+    }
+
+    /* Starship */
+    .starship {
+      position: absolute;
+      top: 45%;
+      left: -200px;
+      width: 180px;
+      height: 60px;
+      background: linear-gradient(90deg, #aaa, #eee);
+      border-radius: 30px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.4);
+      animation: fly 40s linear infinite;
+      z-index: 2;
+    }
+
+    .starship::before {
+      content: "";
+      position: absolute;
+      right: -20px;
+      top: 20px;
+      width: 20px;
+      height: 20px;
+      background: radial-gradient(circle, #7ff, transparent);
+      border-radius: 50%;
+    }
+
+    @keyframes fly {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(calc(100vw + 400px)); }
+    }
+
+    /* Title */
+    .title {
+      position: absolute;
+      top: 40%;
+      width: 100%;
+      text-align: center;
+      font-size: clamp(3rem, 8vw, 6rem);
+      letter-spacing: 0.1em;
+      text-shadow: 0 0 20px rgba(100,150,255,0.8);
+      z-index: 3;
+    }
+
+    /* Contact */
+    .contact {
+      position: absolute;
+      bottom: 16px;
+      right: 20px;
+      font-size: 0.9rem;
+      opacity: 0.75;
+      z-index: 3;
+    }
+
+    .contact a {
+      color: #9ecbff;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Stars -->
+  <div class="stars" id="stars"></div>
+
+  <!-- Starship -->
+  <div class="starship"></div>
+
+  <!-- Title -->
+  <div class="title">Come to me!</div>
+
+  <!-- Contact -->
+  <div class="contact">
+    Contact: <a href="mailto:jameswongkb@gmail.com">jameswongkb@gmail.com</a>
+  </div>
+
+  <script>
+    const starsContainer = document.getElementById("stars");
+    const starCount = 180;
+
+    for (let i = 0; i < starCount; i++) {
+      const star = document.createElement("div");
+      const size = Math.random() * 2.5 + 0.5;
+
+      star.className = "star";
+      star.style.width = size + "px";
+      star.style.height = size + "px";
+      star.style.left = Math.random() * 100 + "%";
+      star.style.top = Math.random() * 100 + "%";
+      star.style.animationDuration = (Math.random() * 3 + 2) + "s";
+
+      starsContainer.appendChild(star);
+    }
+  </script>
+</body>
+</html>
