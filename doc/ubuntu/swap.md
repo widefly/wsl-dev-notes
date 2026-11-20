@@ -29,34 +29,39 @@ requirement. Keep disk space available for normal system operation as well.
 
 ### 2. Create and enable a swap file
 
-This example **adds 8 GiB** at `/swap-extra`; adjust `count` as needed
+This example **adds 8 GiB** at `/swapfile`; adjust `count` as needed
 (`8192` × 1 MiB = 8 GiB). Use a new filename; do not overwrite existing swap.
 Run each command only if the previous one succeeds.
 
 ```bash
-sudo dd if=/dev/zero of=/swap-extra bs=1M count=8192 oflag=excl status=progress
-sudo chmod 600 /swap-extra
-sudo mkswap /swap-extra
-sudo swapon /swap-extra
+sudo fallocate -l 8G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
 ```
 
-`oflag=excl` refuses to overwrite an existing file. Writing with `dd` avoids
-sparse-file holes, which swap files cannot have. Swap is active immediately;
-no reboot is required.
+### 2b. Validate before making it persistent
+
+```bash
+swapon --show
+cat /proc/swaps
+free -h
+sudo journalctl -k --since '-5 minutes' --no-pager
+```
 
 ### 3. Enable it at every boot
 
 Back up and edit `/etc/fstab`:
 
 ```bash
-sudo cp -a /etc/fstab /etc/fstab.before-swap
-sudoedit /etc/fstab
+sudo cp -a /etc/fstab /etc/fstab.bak
+sudo vi /etc/fstab
 ```
 
 Add this line **once**, keeping existing entries:
 
 ```fstab
-/swap-extra none swap sw 0 0
+/swapfile none swap sw 0 0
 ```
 
 Reload systemd's generated units and check the configuration:
@@ -75,7 +80,7 @@ swapon --show
 free -h
 ```
 
-Expect `/swap-extra` with approximately `8G` in `swapon` and the increased swap
+Expect `/swapfile` with approximately `8G` in `swapon` and the increased swap
 total in `free`. Repeat after the next reboot to confirm persistence. Zero swap
 usage is normal when RAM is sufficient.
 
